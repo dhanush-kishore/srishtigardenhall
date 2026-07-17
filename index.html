@@ -97,20 +97,11 @@
   .two-col { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center; }
   @media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
 
-  .photo-ph {
+  .photo {
+    width: 100%;
     aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 10px;
-    background:
-      repeating-linear-gradient(45deg, rgba(230,164,23,0.12) 0 14px, transparent 14px 28px),
-      linear-gradient(160deg, var(--green-leaf), var(--green-deep));
-    color: var(--ivory);
-    display: grid;
-    place-items: center;
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 1rem;
   }
 
   /* Facts */
@@ -199,7 +190,7 @@
         <p>Srishti Garden and Multipurpose Hall is easy to reach, with two event areas and on-site rooms for the family. Over four years we have hosted more than 200 weddings, receptions, and functions.</p>
         <p style="margin-top:0.8rem">We are a family-owned venue.</p>
       </div>
-      <div class="photo-ph">Photo of the hall<br>(replace me)</div>
+      <img class="photo" src="static/image1.jpg" alt="Srishti Garden building at dusk with wedding lighting">
     </div>
   </section>
 
@@ -223,12 +214,12 @@
       <span class="eyebrow">Gallery</span>
       <h2>Moments from Srishti</h2>
       <div class="gallery-grid">
-        <div class="photo-ph">Venue overview</div>
-        <div class="photo-ph">Stage &amp; mandap</div>
-        <div class="photo-ph">Seating arrangements</div>
-        <div class="photo-ph">Evening &amp; lighting</div>
-        <div class="photo-ph">Dining area</div>
-        <div class="photo-ph">Entrance</div>
+        <img class="photo" src="static/3.jpg" alt="Front view of the venue" loading="lazy">
+        <img class="photo" src="static/4.jpg" alt="Decorated wedding stage with mandap pillars" loading="lazy">
+        <img class="photo" src="static/2.jpg" alt="Wedding stage with floral arch and seating" loading="lazy">
+        <img class="photo" src="static/7.jpg" alt="Venue exterior in the evening" loading="lazy">
+        <img class="photo" src="static/8.jpg" alt="Stage decorated for a family function" loading="lazy">
+        <img class="photo" src="static/6.jpg" alt="Venue entrance with Srishti Garden sign" loading="lazy">
       </div>
     </div>
   </section>
