@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Srishti Garden and Multipurpose Hall - Wedding Venue in Moodbidri</title>
+<meta name="description" content="Srishti Garden and Multipurpose Hall is a family-run garden wedding venue in Moodbidri, Karnataka. Book your wedding, reception, or family function.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-deep: #1d3a29;
+    --green-leaf: #2e5c3f;
+    --ivory: #faf6ec;
+    --marigold: #e6a417;
+    --marigold-deep: #c77f0a;
+    --kumkum: #b3372b;
+    --ink: #22281f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Karla', sans-serif;
+    color: var(--ink);
+    background: var(--ivory);
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.15; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* Header */
+  header {
+    background: var(--green-deep);
+    color: var(--ivory);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .brand { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.2rem; letter-spacing: 0.02em; text-decoration: none; }
+  .brand span { color: var(--marigold); }
+  nav a { text-decoration: none; margin-left: 1.4rem; font-size: 0.95rem; opacity: 0.9; }
+  nav a:hover, nav a:focus { opacity: 1; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--marigold); }
+  @media (max-width: 640px) { nav a { margin-left: 0.9rem; font-size: 0.85rem; } }
+
+  /* Hero with garland arch */
+  .hero {
+    background: linear-gradient(180deg, var(--green-deep) 0%, var(--green-leaf) 100%);
+    color: var(--ivory);
+    text-align: center;
+    padding: 3.5rem 1.25rem 4.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .garland { width: min(680px, 92vw); margin: 0 auto 1.5rem; }
+  .hero h1 { font-size: clamp(2rem, 5.5vw, 3.4rem); font-weight: 700; }
+  .hero .place {
+    color: var(--marigold);
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .hero p.lede { max-width: 34rem; margin: 1.2rem auto 2rem; font-size: 1.1rem; opacity: 0.92; }
+  .btn {
+    display: inline-block;
+    background: var(--marigold);
+    color: var(--green-deep);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.85rem 1.8rem;
+    border-radius: 999px;
+    transition: background 0.2s ease;
+  }
+  .btn:hover, .btn:focus { background: var(--marigold-deep); color: var(--ivory); }
+  .btn.ghost { background: transparent; color: var(--ivory); border: 1px solid var(--marigold); margin-left: 0.6rem; }
+  .btn.ghost:hover, .btn.ghost:focus { background: var(--marigold); color: var(--green-deep); }
+
+  /* Sections */
+  section { padding: 4rem 0; }
+  .eyebrow {
+    color: var(--kumkum);
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  section h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 1.2rem; }
+
+  .two-col { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: center; }
+  @media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
+
+  .photo-ph {
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    background:
+      repeating-linear-gradient(45deg, rgba(230,164,23,0.12) 0 14px, transparent 14px 28px),
+      linear-gradient(160deg, var(--green-leaf), var(--green-deep));
+    color: var(--ivory);
+    display: grid;
+    place-items: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* Facts */
+  .facts { background: var(--green-deep); color: var(--ivory); }
+  .facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+  .fact { border-top: 2px solid var(--marigold); padding-top: 0.9rem; }
+  .fact h3 { font-size: 1.15rem; margin-bottom: 0.3rem; color: var(--marigold); }
+  .fact p { font-size: 0.95rem; opacity: 0.9; }
+
+  /* Gallery */
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+
+  /* Contact */
+  .contact { text-align: center; }
+  .contact .card {
+    background: #fff;
+    border: 1px solid rgba(29,58,41,0.15);
+    border-radius: 12px;
+    max-width: 480px;
+    margin: 1.5rem auto 0;
+    padding: 2rem;
+  }
+  .contact .card p { margin-bottom: 0.8rem; }
+  .contact strong { font-family: 'Fraunces', serif; }
+
+  footer {
+    background: var(--green-deep);
+    color: var(--ivory);
+    text-align: center;
+    padding: 1.5rem 1.25rem;
+    font-size: 0.85rem;
+  }
+  footer .marigold { color: var(--marigold); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Srishti <span>Garden</span></a>
+    <nav>
+      <a href="#venue">The Venue</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <!-- Marigold garland arch -->
+    <svg class="garland" viewBox="0 0 680 150" aria-hidden="true">
+      <path d="M20 145 Q 340 -90 660 145" fill="none" stroke="#2e5c3f" stroke-width="6"/>
+      <g fill="#e6a417">
+        <circle cx="20" cy="145" r="9"/><circle cx="60" cy="112" r="9"/><circle cx="103" cy="83" r="9"/>
+        <circle cx="149" cy="58" r="9"/><circle cx="198" cy="38" r="9"/><circle cx="249" cy="24" r="9"/>
+        <circle cx="295" cy="17" r="9"/><circle cx="340" cy="15" r="9"/><circle cx="385" cy="17" r="9"/>
+        <circle cx="431" cy="24" r="9"/><circle cx="482" cy="38" r="9"/><circle cx="531" cy="58" r="9"/>
+        <circle cx="577" cy="83" r="9"/><circle cx="620" cy="112" r="9"/><circle cx="660" cy="145" r="9"/>
+      </g>
+      <g fill="#b3372b">
+        <circle cx="40" cy="129" r="5"/><circle cx="81" cy="97" r="5"/><circle cx="126" cy="70" r="5"/>
+        <circle cx="173" cy="47" r="5"/><circle cx="223" cy="30" r="5"/><circle cx="272" cy="19" r="5"/>
+        <circle cx="317" cy="15" r="5"/><circle cx="363" cy="15" r="5"/><circle cx="408" cy="19" r="5"/>
+        <circle cx="457" cy="30" r="5"/><circle cx="507" cy="47" r="5"/><circle cx="554" cy="70" r="5"/>
+        <circle cx="599" cy="97" r="5"/><circle cx="640" cy="129" r="5"/>
+      </g>
+    </svg>
+    <p class="place">Moodbidri &middot; Dakshina Kannada</p>
+    <h1>Srishti Garden and<br>Multipurpose Hall</h1>
+    <p class="lede">A family-run garden venue in the heart of Moodbidri, with open lawns and a spacious hall for weddings, receptions, and every family function.</p>
+    <a class="btn" href="#contact">Check a date</a>
+    <a class="btn ghost" href="#venue">See the venue</a>
+  </div>
+
+  <section id="venue">
+    <div class="wrap two-col">
+      <div>
+        <span class="eyebrow">The Venue</span>
+        <h2>A garden and hall built for celebrations the way our town holds them</h2>
+        <p>From the muhurtham to the evening reception, Srishti Garden gives your family room to celebrate - a covered multipurpose hall for the ceremony and dining, and garden space for guests to gather under the open sky.</p>
+        <p style="margin-top:0.8rem">We are a family-owned venue, and we host every function as if it were our own.</p>
+      </div>
+      <div class="photo-ph">Photo of the hall<br>(replace me)</div>
+    </div>
+  </section>
+
+  <section class="facts">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--marigold)">At a Glance</span>
+      <h2>What we offer</h2>
+      <div class="facts-grid">
+        <div class="fact"><h3>Seating for 500+</h3><p>Spacious main hall with dining capacity for large functions. (Update with actual capacity.)</p></div>
+        <div class="fact"><h3>Garden lawns</h3><p>Open green space for receptions, photos, and evening gatherings.</p></div>
+        <div class="fact"><h3>Kitchen &amp; dining</h3><p>Full kitchen facilities for your caterers and a dedicated dining area.</p></div>
+        <div class="fact"><h3>Parking &amp; rooms</h3><p>On-site parking and rooms for the bride, groom, and family. (Update details.)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <span class="eyebrow">Gallery</span>
+      <h2>Moments from Srishti</h2>
+      <div class="gallery-grid">
+        <div class="photo-ph">Wedding photo</div>
+        <div class="photo-ph">Garden photo</div>
+        <div class="photo-ph">Hall interior</div>
+        <div class="photo-ph">Dining area</div>
+        <div class="photo-ph">Entrance</div>
+        <div class="photo-ph">Evening lights</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <span class="eyebrow">Bookings</span>
+      <h2>Check availability for your date</h2>
+      <p>Call or WhatsApp us, or visit the hall in Moodbidri. We are happy to show you around.</p>
+      <div class="card">
+        <p><strong>Phone / WhatsApp</strong><br><a href="tel:+910000000000">+91 00000 00000</a> (replace with real number)</p>
+        <p><strong>Address</strong><br>Srishti Garden and Multipurpose Hall, Moodbidri,<br>Dakshina Kannada, Karnataka (add full address)</p>
+        <p><a class="btn" href="https://wa.me/910000000000">Message on WhatsApp</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Srishti Garden and Multipurpose Hall &middot; Moodbidri <span class="marigold">&#10047;</span> Family owned and run</p>
+</footer>
+
+</body>
+</html>
