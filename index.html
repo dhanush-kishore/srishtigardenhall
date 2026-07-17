@@ -123,18 +123,9 @@
   /* Gallery */
   .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
 
-  /* Contact */
-  .contact { text-align: center; }
-  .contact .card {
-    background: #fff;
-    border: 1px solid rgba(29,58,41,0.15);
-    border-radius: 12px;
-    max-width: 480px;
-    margin: 1.5rem auto 0;
-    padding: 2rem;
-  }
-  .contact .card p { margin-bottom: 0.8rem; }
-  .contact strong { font-family: 'Fraunces', serif; }
+  /* Contact in hero */
+  .hero-contact .meta { margin-top: 1rem; font-size: 0.95rem; opacity: 0.88; }
+  .hero-contact .meta a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--marigold); }
 
   footer {
     background: var(--green-deep);
@@ -187,22 +178,12 @@
     </svg>
     <p class="place">Moodbidri &middot; Dakshina Kannada</p>
     <h1>Srishti Garden and<br>Multipurpose Hall</h1>
-    <p class="lede">A family-run banquet hall in Moodbidri for weddings, receptions, and family functions.</p>
-    <a class="btn" href="#contact">Contact</a>
-  </div>
-
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <span class="eyebrow">Bookings</span>
-      <h2>Contact</h2>
-      <p>Call or WhatsApp us about your date, or visit the hall in Moodbidri. We are happy to show you around.</p>
-      <div class="card">
-        <p><strong>Phone / WhatsApp</strong><br><a href="tel:+919945420100">+91 99454 20100</a></p>
-        <p><strong>Address</strong><br>Srishti Garden and Multipurpose Hall,<br>Moodbidri, Karnataka 574227, India<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Srishti+Garden+and+Multipurpose+Hall+Moodbidri">Open in Google Maps</a></p>
-        <p><strong>Instagram</strong><br><a href="https://www.instagram.com/srishtigardenhall/">@srishtigardenhall</a></p>
-      </div>
+    <p class="lede">A family-run banquet hall in Moodbidri for weddings, receptions, and family functions. Call or WhatsApp us about your date, or visit - we are happy to show you around.</p>
+    <div id="contact" class="hero-contact">
+      <a class="btn" href="tel:+919945420100">Call +91 99454 20100</a>
+      <p class="meta">Moodbidri, Karnataka 574227 &middot; <a href="https://www.google.com/maps/search/?api=1&amp;query=Srishti+Garden+and+Multipurpose+Hall+Moodbidri">Google Maps</a> &middot; <a href="https://www.instagram.com/srishtigardenhall/">@srishtigardenhall</a></p>
     </div>
-  </section>
+  </div>
 
   <section id="venue" class="facts">
     <div class="wrap">
