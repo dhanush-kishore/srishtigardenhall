@@ -43,9 +43,25 @@
   header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
   .brand { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.2rem; letter-spacing: 0.02em; text-decoration: none; }
   .brand span { color: var(--marigold); }
-  nav a { text-decoration: none; margin-left: 1.4rem; font-size: 0.95rem; opacity: 0.9; }
+  nav { display: flex; align-items: center; }
+  nav a { text-decoration: none; margin-left: 1.4rem; font-size: 0.95rem; opacity: 0.9; white-space: nowrap; }
   nav a:hover, nav a:focus { opacity: 1; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--marigold); }
-  @media (max-width: 640px) { nav a { margin-left: 0.9rem; font-size: 0.85rem; } }
+  nav a.call {
+    background: var(--marigold);
+    color: var(--green-deep);
+    font-weight: 700;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    opacity: 1;
+  }
+  nav a.call:hover, nav a.call:focus { background: var(--marigold-deep); color: var(--ivory); text-decoration: none; }
+  .call-short { display: none; }
+  @media (max-width: 640px) {
+    .brand { font-size: 1.05rem; }
+    nav a { margin-left: 0.75rem; font-size: 0.85rem; }
+    .call-full { display: none; }
+    .call-short { display: inline; }
+  }
 
   /* Hero with garland arch */
   .hero {
@@ -148,9 +164,9 @@
   <div class="wrap">
     <a class="brand" href="#top">Srishti <span>Garden</span></a>
     <nav>
-      <a href="#venue">The Venue</a>
+      <a href="#venue">Venue</a>
       <a href="#gallery">Gallery</a>
-      <a href="tel:+919945420100">+91 99454 20100</a>
+      <a class="call" href="tel:+919945420100"><span class="call-full">+91 99454 20100</span><span class="call-short">Call</span></a>
     </nav>
   </div>
 </header>
