@@ -153,6 +153,18 @@
     .hero-grid .hero-contact { margin: 2rem auto 0; }
   }
 
+  /* Reviews */
+  .reviews { background: var(--ivory); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+  .review { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 14px rgba(22,41,31,0.06); }
+  .review blockquote { font-family: 'Fraunces', serif; font-size: 1.15rem; line-height: 1.4; color: var(--green-deep); }
+  .review blockquote::before { content: '\201C'; display: block; color: var(--marigold); font-size: 2.4rem; line-height: 0.8; }
+  .review figcaption { margin-top: 0.8rem; font-size: 0.85rem; color: #5d5a50; }
+  .review .stars { color: var(--marigold); letter-spacing: 0.1em; }
+  .reviews .summary { max-width: 42rem; }
+  .reviews .more { margin-top: 0.6rem; }
+  .reviews .more a { text-underline-offset: 3px; text-decoration-color: var(--marigold); }
+
   /* Catering */
   .catering-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
   .cater-card { background: #fff; border-radius: 0 12px 12px 0; padding: 1.4rem 1.5rem; border-left: 3px solid var(--marigold); box-shadow: 0 4px 14px rgba(22,41,31,0.06); }
@@ -371,6 +383,29 @@
         <div class="fact"><h3>Power back-up</h3><p>Full electricity back-up for the whole venue.</p></div>
         <div class="fact"><h3>500+ events hosted</h3><p>Over five years of weddings, receptions, and family functions, rated 4.5 on WeddingBazaar.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <div class="wrap">
+      <span class="eyebrow">Reviews</span>
+      <h2>What our guests say</h2>
+      <p class="summary">Guests on Google most often mention the spacious halls, how clean and well managed the venue is, and the ample parking.</p>
+      <div class="reviews-grid">
+        <figure class="review">
+          <blockquote>Well managed hall with lots of space</blockquote>
+          <figcaption><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &middot; Vidhya S., Google review</figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote>Very good place. Spacious, clean and well managed.</blockquote>
+          <figcaption><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &middot; Sushanth S., Google review</figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote>Pleasant place &amp; Hall for any kind of functions.</blockquote>
+          <figcaption><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &middot; Naresh S., Google review</figcaption>
+        </figure>
+      </div>
+      <p class="more"><a href="https://www.google.com/maps/search/?api=1&amp;query=Srishti+Garden+and+Multipurpose+Hall+Moodbidri" rel="noopener">Read all 97 reviews on Google</a></p>
     </div>
   </section>
 
