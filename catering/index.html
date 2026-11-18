@@ -368,10 +368,34 @@
   .strip li.hl { font-weight: 700; color: var(--accent); }
   @media (max-width: 560px) { .offer { font-size: 0.88rem; } .offer-box { flex-direction: column; align-items: flex-start; gap: 0.5rem; } }
 
-  .catering-grid .cater-card.feature { grid-column: 1 / -1; background: #fbefe9; border-left-color: var(--accent); }
-  .catering-grid .cater-card.feature h3 { color: var(--accent); }
 
   @media (max-width: 760px) { .catering-grid { grid-template-columns: 1fr; } }
+
+  /* Free hall highlight */
+  .catering-grid .cater-card.feature { grid-column: 1 / -1; display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+  .cater-card.feature .feature-cta { margin-left: auto; background: #fff; color: var(--accent); font-weight: 700; text-decoration: none; padding: 0.75rem 1.4rem; border-radius: 999px; }
+  @media (max-width: 560px) { .cater-card.feature .feature-cta { margin-left: 0; } }
+  .fact.fact-feature, .cater-card.feature {
+    position: relative; overflow: hidden;
+    background: linear-gradient(120deg, #9c4a2f 0%, #b5593a 55%, #c7744f 100%);
+    border: 0; color: #fff; box-shadow: 0 18px 40px rgba(156,74,47,0.28);
+  }
+  .fact.fact-feature { padding: 1.9rem 2rem; gap: 1.4rem; }
+  .fact.fact-feature::after, .cater-card.feature::after {
+    content: ''; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.18), rgba(255,255,255,0) 70%); pointer-events: none;
+  }
+  .fact.fact-feature h3, .cater-card.feature h3 { color: #fff; font-size: clamp(1.35rem, 2.6vw, 1.75rem); margin-bottom: 0.3rem; }
+  .fact.fact-feature p, .cater-card.feature p { color: rgba(255,255,255,0.92); font-size: 1rem; }
+  .fact.fact-feature .fact-icon { width: 3.4rem; height: 3.4rem; background: rgba(255,255,255,0.16); color: #fff; box-shadow: 0 0 0 0 rgba(255,255,255,0.45); animation: pulse 2.4s ease-out infinite; }
+  .fact.fact-feature .fact-icon svg { width: 1.6rem; height: 1.6rem; }
+  .fact-feature .feature-cta { margin-left: auto; flex: none; background: #fff; color: var(--accent); font-weight: 700; text-decoration: none; padding: 0.75rem 1.4rem; border-radius: 999px; transition: transform 0.2s ease; }
+  .fact-feature .feature-cta:hover { transform: translateY(-2px); }
+  .fact.fact-feature:hover { transform: none; border-color: transparent; box-shadow: 0 18px 40px rgba(156,74,47,0.32); }
+  .cater-card.feature { border-radius: 14px; padding: 1.6rem 1.75rem; }
+  @media (prefers-reduced-motion: reduce) { .fact.fact-feature .fact-icon { animation: none; } }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.45); } 70% { box-shadow: 0 0 0 14px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
+  @media (max-width: 560px) { .fact-feature .feature-cta { margin-left: 0; } .fact.fact-feature { padding: 1.6rem 1.4rem; } }
 
   /* Scroll reveal (only when JS is running and motion is allowed) */
   .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 90ms); }
@@ -442,7 +466,7 @@
       <div class="vnv"><span class="veg">VEG</span><span class="nonveg">NON VEG</span></div>
       <p class="intro">The in-house kitchen of Srishti Garden, Alangar, Moodbidri. We cater at our hall and at yours.</p>
       <div class="catering-grid">
-        <div class="cater-card feature"><h3>The hall is free with our catering</h3><p>Book Srishti Caterers for 500+ guests and the hall is free.</p></div>
+        <div class="cater-card feature"><div><h3>The hall is free with our catering</h3><p>Book Srishti Caterers for 500+ guests and the hall is free.</p></div><a class="feature-cta" href="/#enquire">Check your date</a></div>
         <div class="cater-card"><h3>In-house catering</h3><p>Cooked on site for every function at Srishti Garden.</p></div>
         <div class="cater-card"><h3>Outdoor catering</h3><p>We cater at your home or any venue.</p></div>
         <div class="cater-card"><h3>Menus for your event</h3><p>Share your event and guest count - we'll suggest a menu.</p></div>

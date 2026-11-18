@@ -410,6 +410,29 @@
 
   @media (max-width: 760px) { .catering-grid { grid-template-columns: 1fr; } }
 
+  /* Free hall highlight */
+  .fact.fact-feature, .cater-card.feature {
+    position: relative; overflow: hidden;
+    background: linear-gradient(120deg, #9c4a2f 0%, #b5593a 55%, #c7744f 100%);
+    border: 0; color: #fff; box-shadow: 0 18px 40px rgba(156,74,47,0.28);
+  }
+  .fact.fact-feature { padding: 1.9rem 2rem; gap: 1.4rem; }
+  .fact.fact-feature::after, .cater-card.feature::after {
+    content: ''; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.18), rgba(255,255,255,0) 70%); pointer-events: none;
+  }
+  .fact.fact-feature h3, .cater-card.feature h3 { color: #fff; font-size: clamp(1.35rem, 2.6vw, 1.75rem); margin-bottom: 0.3rem; }
+  .fact.fact-feature p, .cater-card.feature p { color: rgba(255,255,255,0.92); font-size: 1rem; }
+  .fact.fact-feature .fact-icon { width: 3.4rem; height: 3.4rem; background: rgba(255,255,255,0.16); color: #fff; box-shadow: 0 0 0 0 rgba(255,255,255,0.45); animation: pulse 2.4s ease-out infinite; }
+  .fact.fact-feature .fact-icon svg { width: 1.6rem; height: 1.6rem; }
+  .fact-feature .feature-cta { margin-left: auto; flex: none; background: #fff; color: var(--accent); font-weight: 700; text-decoration: none; padding: 0.75rem 1.4rem; border-radius: 999px; transition: transform 0.2s ease; }
+  .fact-feature .feature-cta:hover { transform: translateY(-2px); }
+  .fact.fact-feature:hover { transform: none; border-color: transparent; box-shadow: 0 18px 40px rgba(156,74,47,0.32); }
+  .cater-card.feature { border-radius: 14px; padding: 1.6rem 1.75rem; }
+  @media (prefers-reduced-motion: reduce) { .fact.fact-feature .fact-icon { animation: none; } }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.45); } 70% { box-shadow: 0 0 0 14px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
+  @media (max-width: 560px) { .fact-feature .feature-cta { margin-left: 0; } .fact.fact-feature { padding: 1.6rem 1.4rem; } }
+
   /* Scroll reveal (only when JS is running and motion is allowed) */
   .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 90ms); }
   .js .reveal.in { opacity: 1; transform: none; }
@@ -476,7 +499,7 @@
         <img class="photo" src="static/image1.jpg" width="1360" height="907" alt="Srishti Garden lit up at dusk for a wedding" loading="lazy" style="aspect-ratio:2/1; margin-bottom:1.75rem">
       </picture>
       <div class="facts-grid">
-        <div class="fact fact-feature"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><div><h3>The hall is free with our catering</h3><p>Book Srishti Caterers for 500+ guests and the hall is free. <a href="/catering/">See catering</a></p></div></div>
+        <div class="fact fact-feature"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><div><h3>The hall is free with our catering</h3><p>Book Srishti Caterers for 500+ guests and the hall is free.</p></div><a class="feature-cta" href="#enquire">Check your date</a></div>
         <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span><h3>2 grand banquet halls</h3><p>Up to 1,000 guests each. Ceremony in one, dinner in the other.</p></div>
         <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></svg></span><h3>Our own catering</h3><p>Veg and non-veg, cooked on site by Srishti Caterers.</p></div>
         <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7a2 2 0 1 1 2-2"/><path d="M12 7v1L3 15a1.5 1.5 0 0 0 1 3h16a1.5 1.5 0 0 0 1-3l-9-7"/></svg></span><h3>Bride and groom rooms</h3><p>Private dressing rooms, steps from the stage.</p></div>
