@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Srishti Caterers – Veg and Non-Veg Catering, Moodbidri</title>
-<meta name="description" content="Srishti Caterers in Moodbidri: veg and non-veg catering for weddings, receptions, engagements, corporate events, and family functions. In-house at Srishti Garden Hall or outdoor at your venue. Call +91 99454 20100.">
+<meta name="description" content="Srishti Caterers in Moodbidri - hall free when you book our catering for 500+ guests: veg and non-veg catering for weddings, receptions, engagements, corporate events, and family functions. In-house at Srishti Garden Hall or outdoor at your venue. Call +91 99454 20100.">
 <meta name="theme-color" content="#fbf7f0">
 <link rel="canonical" href="https://srishtigardenhall.com/catering/">
 <meta property="og:site_name" content="Srishti Garden and Multipurpose Hall">
@@ -48,6 +48,8 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {"@type": "Question", "name": "Is the hall free if we book Srishti Caterers?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. When you choose Srishti Caterers for more than 500 guests, the hall at Srishti Garden and Multipurpose Hall is free."}},
     {"@type": "Question", "name": "Do Srishti Caterers serve both veg and non-veg food?",
      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Srishti Caterers prepare both veg and non-veg menus."}},
     {"@type": "Question", "name": "Can Srishti Caterers cater at another venue or at home?",
@@ -354,6 +356,18 @@
   .enquiry-form { box-shadow: none; border: 1px solid var(--line); }
   footer { background: var(--ink); }
 
+  /* Free hall offer */
+  .offer { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.3rem; padding: 0.55rem 1rem 0.55rem 0.6rem; border-radius: 999px; background: #fff; border: 1px solid #e9cdbf; color: var(--ink); font-size: 0.95rem; text-decoration: none; box-shadow: 0 6px 18px rgba(156,74,47,0.10); }
+  .offer .tag { background: var(--accent); color: #fff; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 999px; white-space: nowrap; }
+  .offer strong { color: var(--accent); }
+  a.offer:hover { border-color: var(--accent); }
+  .offer-box { display: flex; gap: 1.1rem; align-items: center; background: #fff; border: 1px solid #e9cdbf; border-left: 4px solid var(--accent); border-radius: 0 14px 14px 0; padding: 1.2rem 1.4rem; margin: 0 0 1.75rem; max-width: 46rem; }
+  .offer-box .big { font-family: 'Fraunces', serif; font-size: 1.6rem; color: var(--accent); line-height: 1; white-space: nowrap; }
+  .offer-box p { color: var(--ink); }
+  .offer-box small { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 0.2rem; }
+  .strip li.hl { font-weight: 700; color: var(--accent); }
+  @media (max-width: 560px) { .offer { font-size: 0.88rem; } .offer-box { flex-direction: column; align-items: flex-start; gap: 0.5rem; } }
+
   /* Scroll reveal (only when JS is running and motion is allowed) */
   .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 90ms); }
   .js .reveal.in { opacity: 1; transform: none; }
@@ -408,6 +422,7 @@
     <p class="place">Srishti Caterers &middot; Moodbidri</p>
     <h1>Veg and non-veg catering in Moodbidri</h1>
     <p class="lede">Elevate your events with our exquisite flavours. Veg and non-veg menus from our own kitchen, served at Srishti Garden Hall or wherever you celebrate.</p>
+    <div><span class="offer"><span class="tag">Offer</span><span><strong>Hall free</strong> when you book our catering for 500+ guests</span></span></div>
     <div class="cta-row">
       <a class="btn-call" href="tel:+919945420100">Call +91 99454 20100</a>
       <a class="btn-wa" href="https://wa.me/919945420100?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Srishti%20Caterers%20for%20my%20event.">Message on WhatsApp</a>
@@ -452,6 +467,10 @@
     <div class="wrap">
       <span class="eyebrow">Questions</span>
       <h2>Catering FAQs</h2>
+      <details open>
+        <summary>Is the hall free if we book your catering?</summary>
+        <p>Yes. When you choose Srishti Caterers for more than 500 guests, the hall at Srishti Garden is free. Call or WhatsApp <a href="tel:+919945420100">+91 99454 20100</a> to check your date.</p>
+      </details>
       <details>
         <summary>Do you serve both veg and non-veg food?</summary>
         <p>Yes. Srishti Caterers prepare both veg and non-veg menus.</p>

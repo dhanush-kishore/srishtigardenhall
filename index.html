@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Srishti Garden Hall, Moodbidri – Wedding Hall &amp; Caterers</title>
-<meta name="description" content="Celebrate at Srishti Garden, a family-run wedding hall in Alangar, Moodbidri: two grand halls for 1,000 guests each, our own veg and non-veg catering, parking, and full power back-up. Call or WhatsApp to check your date.">
+<meta name="description" content="Celebrate at Srishti Garden, a family-run wedding hall in Moodbidri. The hall is free when you choose our veg or non-veg catering for more than 500 guests. Two grand halls, parking, full power back-up.">
 <meta name="theme-color" content="#fbf7f0">
 <link rel="canonical" href="https://srishtigardenhall.com/">
 <meta property="og:site_name" content="Srishti Garden and Multipurpose Hall">
@@ -390,6 +390,18 @@
   @media (max-width: 900px) { .facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 560px) { .facts-grid { grid-template-columns: 1fr; } .fact { padding: 1.3rem 1.25rem; } }
 
+  /* Free hall offer */
+  .offer { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.3rem; padding: 0.55rem 1rem 0.55rem 0.6rem; border-radius: 999px; background: #fff; border: 1px solid #e9cdbf; color: var(--ink); font-size: 0.95rem; text-decoration: none; box-shadow: 0 6px 18px rgba(156,74,47,0.10); }
+  .offer .tag { background: var(--accent); color: #fff; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 999px; white-space: nowrap; }
+  .offer strong { color: var(--accent); }
+  a.offer:hover { border-color: var(--accent); }
+  .offer-box { display: flex; gap: 1.1rem; align-items: center; background: #fff; border: 1px solid #e9cdbf; border-left: 4px solid var(--accent); border-radius: 0 14px 14px 0; padding: 1.2rem 1.4rem; margin: 0 0 1.75rem; max-width: 46rem; }
+  .offer-box .big { font-family: 'Fraunces', serif; font-size: 1.6rem; color: var(--accent); line-height: 1; white-space: nowrap; }
+  .offer-box p { color: var(--ink); }
+  .offer-box small { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 0.2rem; }
+  .strip li.hl { font-weight: 700; color: var(--accent); }
+  @media (max-width: 560px) { .offer { font-size: 0.88rem; } .offer-box { flex-direction: column; align-items: flex-start; gap: 0.5rem; } }
+
   /* Scroll reveal (only when JS is running and motion is allowed) */
   .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 90ms); }
   .js .reveal.in { opacity: 1; transform: none; }
@@ -424,6 +436,7 @@
         <h1>Srishti Garden and<br>Multipurpose Hall</h1>
         <p class="lede">The best wedding and function hall in Moodbidri. Two grand halls, food from our own kitchen, and a family team that looks after every detail - so you can simply enjoy your day.</p>
         <p class="events">Wedding &middot; Reception &middot; Engagement &middot; Corporate events</p>
+        <a class="offer" href="#catering"><span class="tag">Offer</span><span><strong>Hall free</strong> with our catering for 500+ guests</span></a>
         <div class="hero-ctas">
           <a class="btn" href="tel:+919945420100">Call +91 99454 20100</a>
           <a class="btn-wa" href="https://wa.me/919945420100?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20booking%20Srishti%20Garden.">Message on WhatsApp</a>
@@ -439,7 +452,7 @@
   <div class="strip">
     <ul class="wrap" aria-label="Highlights">
       <li>2 halls &middot; 1,000 guests each</li>
-      <li><a href="/catering/">Veg and non-veg catering</a></li>
+      <li class="hl"><a href="/catering/">Free hall with our catering for 500+ guests</a></li>
       <li>Ample parking</li>
       <li>Full power back-up</li>
       <li>500+ events hosted</li>
@@ -457,7 +470,7 @@
       </picture>
       <div class="facts-grid">
         <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span><h3>2 grand banquet halls</h3><p>Up to 1,000 guests in each. Hold the ceremony in one and dinner in the other, or keep veg and non-veg dining on separate floors.</p></div>
-        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></svg></span><h3>Our own catering</h3><p>Srishti Caterers cook veg and non-veg on site - one booking covers the hall and the food. <a href="/catering/">See catering</a></p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></svg></span><h3>Our own catering</h3><p>Srishti Caterers cook veg and non-veg on site. Choose our catering for more than 500 guests and the hall is free. <a href="/catering/">See catering</a></p></div>
         <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7a2 2 0 1 1 2-2"/><path d="M12 7v1L3 15a1.5 1.5 0 0 0 1 3h16a1.5 1.5 0 0 0 1-3l-9-7"/></svg></span><h3>Bride and groom rooms</h3><p>Private dressing rooms at the venue, so you can get ready calmly and step straight onto the stage.</p></div>
         <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/></svg></span><h3>Parking for everyone</h3><p>A spacious on-site car park, so guests arrive relaxed instead of hunting for space on the road.</p></div>
         <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Full power back-up</h3><p>Back-up for the whole venue. The lights and music keep going, whatever the weather does.</p></div>
@@ -552,6 +565,7 @@
       <span class="eyebrow">Srishti Caterers</span>
       <h2>Food your guests will remember</h2>
       <p class="tagline">Elevate your events with our exquisite flavours.</p>
+      <div class="offer-box"><span class="big">Free hall</span><p>Book Srishti Caterers for more than 500 guests and you pay nothing for the hall.<small>Call or WhatsApp us to check your date.</small></p></div>
       <div class="vnv"><span class="veg">VEG</span><span class="nonveg">NON VEG</span></div>
       <p class="intro">A great function is remembered for its food. Our own kitchen, Srishti Caterers, cooks veg and non-veg for every event at the hall - and brings the same food to your home or venue.</p>
       <div class="catering-grid">
