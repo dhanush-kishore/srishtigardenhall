@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://srishtigardenhall.com/</loc>
     <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://srishtigardenhall.com/"/>
+    <xhtml:link rel="alternate" hreflang="kn" href="https://srishtigardenhall.com/kn/"/>
+  </url>
+  <url>
+    <loc>https://srishtigardenhall.com/kn/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://srishtigardenhall.com/"/>
+    <xhtml:link rel="alternate" hreflang="kn" href="https://srishtigardenhall.com/kn/"/>
   </url>
   <url>
     <loc>https://srishtigardenhall.com/catering/</loc>
     <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://srishtigardenhall.com/catering/"/>
+    <xhtml:link rel="alternate" hreflang="kn" href="https://srishtigardenhall.com/kn/catering/"/>
+  </url>
+  <url>
+    <loc>https://srishtigardenhall.com/kn/catering/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://srishtigardenhall.com/catering/"/>
+    <xhtml:link rel="alternate" hreflang="kn" href="https://srishtigardenhall.com/kn/catering/"/>
   </url>
 </urlset>
