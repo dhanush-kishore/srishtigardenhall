@@ -94,16 +94,16 @@ HOME = [
     ('<meta property="og:description" content="Family-run wedding hall in Alangar, Moodbidri. Two banquet halls with 1,000 person capacity each. Call or WhatsApp to book.">',
      '<meta property="og:description" content="ಅಲಂಗಾರು, ಮೂಡುಬಿದಿರೆಯ ಕುಟುಂಬದವರು ನಡೆಸುವ ಮದುವೆ ಹಾಲ್. ತಲಾ 1,000 ಅತಿಥಿಗಳ ಎರಡು ಸಭಾಂಗಣಗಳು. ಬುಕಿಂಗ್‌ಗೆ ಕರೆ ಅಥವಾ ವಾಟ್ಸಾಪ್ ಮಾಡಿ.">'),
     (f'<meta property="og:url" content="{BASE}/">', f'<meta property="og:url" content="{BASE}/kn/">'),
-    ('<meta property="og:image:alt" content="Srishti Garden Multipurpose Hall building in Moodbidri">', '<meta property="og:image:alt" content="ಮೂಡುಬಿದಿರೆಯ ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಬಹುಪಯೋಗಿ ಸಭಾಂಗಣ ಕಟ್ಟಡ">'),
+    ('<meta property="og:image:alt" content="Srishti Garden Multipurpose Hall building in Moodbidri">', '<meta property="og:image:alt" content="ಮೂಡುಬಿದಿರೆಯ ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಆ್ಯಂಡ್ ಮಲ್ಟಿಪರ್ಪಸ್ ಹಾಲ್ ಕಟ್ಟಡ">'),
     ('<meta property="og:locale" content="en_IN">', '<meta property="og:locale" content="kn_IN">'),
     ('<a href="/catering/">Catering</a>', '<a href="/kn/catering/">ಕ್ಯಾಟರಿಂಗ್</a>'),
     ('<p class="place">Moodbidri</p>', '<p class="place">ಮೂಡುಬಿದಿರೆ</p>'),
-    ('<h1>Srishti Garden and<br>Multipurpose Hall</h1>', '<h1>ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಮತ್ತು<br>ಬಹುಪಯೋಗಿ ಸಭಾಂಗಣ</h1>'),
+    ('<h1>Srishti Garden and<br>Multipurpose Hall</h1>', '<h1>ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಆ್ಯಂಡ್<br>ಮಲ್ಟಿಪರ್ಪಸ್ ಹಾಲ್</h1>'),
     ('<p class="lede">The best wedding and function hall in Moodbidri. Two grand halls, our own catering, and a family team that looks after every detail.</p>',
      '<p class="lede">ಮೂಡುಬಿದಿರೆಯ ಅತ್ಯುತ್ತಮ ಮದುವೆ ಮತ್ತು ಸಮಾರಂಭ ಹಾಲ್. ಎರಡು ಭವ್ಯ ಸಭಾಂಗಣಗಳು, ನಮ್ಮದೇ ಕ್ಯಾಟರಿಂಗ್, ಮತ್ತು ಪ್ರತಿಯೊಂದು ವಿಷಯವನ್ನೂ ನೋಡಿಕೊಳ್ಳುವ ನಮ್ಮ ಕುಟುಂಬದ ತಂಡ.</p>'),
     ('<p class="events">Wedding &middot; Reception &middot; Engagement &middot; Corporate events</p>', '<p class="events">ಮದುವೆ &middot; ಆರತಕ್ಷತೆ &middot; ನಿಶ್ಚಿತಾರ್ಥ &middot; ಕಾರ್ಪೊರೇಟ್ ಕಾರ್ಯಕ್ರಮಗಳು</p>'),
     (WA_BOOK_EN, WA_BOOK_KN),
-    ('alt="Srishti Garden Multipurpose Hall building in Moodbidri" fetchpriority', 'alt="ಮೂಡುಬಿದಿರೆಯ ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಬಹುಪಯೋಗಿ ಸಭಾಂಗಣ ಕಟ್ಟಡ" fetchpriority'),
+    ('alt="Srishti Garden Multipurpose Hall building in Moodbidri" fetchpriority', 'alt="ಮೂಡುಬಿದಿರೆಯ ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಆ್ಯಂಡ್ ಮಲ್ಟಿಪರ್ಪಸ್ ಹಾಲ್ ಕಟ್ಟಡ" fetchpriority'),
     ('<ul class="wrap" aria-label="Highlights">', '<ul class="wrap" aria-label="ಮುಖ್ಯಾಂಶಗಳು">'),
     ('<li>2 halls &middot; 1,000 guests each</li>', '<li>2 ಸಭಾಂಗಣಗಳು &middot; ತಲಾ 1,000 ಅತಿಥಿಗಳು</li>'),
     ('<li><a href="/catering/">Veg and non-veg catering</a></li>', '<li><a href="/kn/catering/">ಸಸ್ಯಾಹಾರ ಮತ್ತು ಮಾಂಸಾಹಾರ ಕ್ಯಾಟರಿಂಗ್</a></li>'),
@@ -183,7 +183,7 @@ HOME = [
             Ontikatte, Alangar<br>
             Near Kadalakere Nisargadhama<br>
             Moodbidri, Karnataka 574227''',
-     '''            <strong>ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಮತ್ತು ಬಹುಪಯೋಗಿ ಸಭಾಂಗಣ</strong><br>
+     '''            <strong>ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಆ್ಯಂಡ್ ಮಲ್ಟಿಪರ್ಪಸ್ ಹಾಲ್</strong><br>
             ಒಂಟಿಕಟ್ಟೆ, ಅಲಂಗಾರು<br>
             ಕಡಲಕೆರೆ ನಿಸರ್ಗಧಾಮದ ಹತ್ತಿರ<br>
             ಮೂಡುಬಿದಿರೆ, ಕರ್ನಾಟಕ 574227'''),
@@ -193,7 +193,7 @@ HOME = [
     ('rel="noopener">Get directions</a>', 'rel="noopener">ದಾರಿ ತಿಳಿಯಿರಿ</a>'),
     ('title="Map showing Srishti Garden and Multipurpose Hall, Moodbidri"', 'title="ಮೂಡುಬಿದಿರೆಯ ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ನಕ್ಷೆ"'),
     ('<p>Srishti Garden and Multipurpose Hall &middot; Moodbidri <span class="marigold">&#10047;</span> Family owned and run</p>',
-     '<p>ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಮತ್ತು ಬಹುಪಯೋಗಿ ಸಭಾಂಗಣ &middot; ಮೂಡುಬಿದಿರೆ <span class="marigold">&#10047;</span> ಕುಟುಂಬದ ಮಾಲೀಕತ್ವ ಮತ್ತು ನಿರ್ವಹಣೆ</p>'),
+     '<p>ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಆ್ಯಂಡ್ ಮಲ್ಟಿಪರ್ಪಸ್ ಹಾಲ್ &middot; ಮೂಡುಬಿದಿರೆ <span class="marigold">&#10047;</span> ಕುಟುಂಬದ ಮಾಲೀಕತ್ವ ಮತ್ತು ನಿರ್ವಹಣೆ</p>'),
     ('<a href="/catering/">Srishti Caterers</a>', '<a href="/kn/catering/">ಸೃಷ್ಟಿ ಕ್ಯಾಟರರ್ಸ್</a>'),
     ('<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">', '<dialog class="lightbox" id="lightbox" aria-label="ಫೋಟೋ ವೀಕ್ಷಕ">'),
     ('aria-label="Previous photo"', 'aria-label="ಹಿಂದಿನ ಫೋಟೋ"'),
@@ -259,7 +259,7 @@ CAT = [
     ('>WhatsApp us</a>', '>ವಾಟ್ಸಾಪ್ ಮಾಡಿ</a>'),
     ('<p style="margin:1.4rem 0 0"><a href="/">See Srishti Garden Hall</a></p>', '<p style="margin:1.4rem 0 0"><a href="/kn/">ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಹಾಲ್ ನೋಡಿ</a></p>'),
     ('<p>Srishti Caterers &middot; Srishti Garden and Multipurpose Hall &middot; Ontikatte, Alangar, Moodbidri 574227 <span class="marigold">&#10047;</span> Family owned and run</p>',
-     '<p>ಸೃಷ್ಟಿ ಕ್ಯಾಟರರ್ಸ್ &middot; ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಮತ್ತು ಬಹುಪಯೋಗಿ ಸಭಾಂಗಣ &middot; ಒಂಟಿಕಟ್ಟೆ, ಅಲಂಗಾರು, ಮೂಡುಬಿದಿರೆ 574227 <span class="marigold">&#10047;</span> ಕುಟುಂಬದ ಮಾಲೀಕತ್ವ ಮತ್ತು ನಿರ್ವಹಣೆ</p>'),
+     '<p>ಸೃಷ್ಟಿ ಕ್ಯಾಟರರ್ಸ್ &middot; ಸೃಷ್ಟಿ ಗಾರ್ಡನ್ ಆ್ಯಂಡ್ ಮಲ್ಟಿಪರ್ಪಸ್ ಹಾಲ್ &middot; ಒಂಟಿಕಟ್ಟೆ, ಅಲಂಗಾರು, ಮೂಡುಬಿದಿರೆ 574227 <span class="marigold">&#10047;</span> ಕುಟುಂಬದ ಮಾಲೀಕತ್ವ ಮತ್ತು ನಿರ್ವಹಣೆ</p>'),
 ]
 
 KN_CAT_DESC = 'ಸೃಷ್ಟಿ ಕ್ಯಾಟರರ್ಸ್, ಮೂಡುಬಿದಿರೆ - 500ಕ್ಕೂ ಹೆಚ್ಚು ಅತಿಥಿಗಳಿಗೆ ನಮ್ಮ ಕ್ಯಾಟರಿಂಗ್ ಬುಕ್ ಮಾಡಿದರೆ ಹಾಲ್ ಉಚಿತ. ಮದುವೆ, ಆರತಕ್ಷತೆ, ನಿಶ್ಚಿತಾರ್ಥ ಮತ್ತು ಎಲ್ಲಾ ಸಮಾರಂಭಗಳಿಗೆ ಸಸ್ಯಾಹಾರ ಮತ್ತು ಮಾಂಸಾಹಾರ ಕ್ಯಾಟರಿಂಗ್. ಕರೆ: +91 99454 20100.'
