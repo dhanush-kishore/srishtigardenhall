@@ -169,7 +169,7 @@
   .rating .rsource { font-size: 0.85rem; color: var(--muted); display: block; }
 
   /* Catering */
-  .catering-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
+  .catering-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
   .cater-card { background: #fff; border-radius: 0 12px 12px 0; padding: 1.4rem 1.5rem; border-left: 3px solid var(--marigold); box-shadow: 0 4px 14px rgba(22,41,31,0.06); }
   .cater-card h3 { color: var(--green-deep); font-size: 1.15rem; margin-bottom: 0.35rem; }
   .cater-card p { font-size: 0.95rem; }
@@ -390,7 +390,7 @@
   @media (max-width: 900px) { .facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 560px) { .facts-grid { grid-template-columns: 1fr; } .fact { padding: 1.3rem 1.25rem; } }
 
-  /* Free hall with our catering (standard practice) */
+  /* Free hall with our catering */
   .offer { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.3rem; padding: 0.55rem 1rem 0.55rem 0.6rem; border-radius: 999px; background: #fff; border: 1px solid #e9cdbf; color: var(--ink); font-size: 0.95rem; text-decoration: none; box-shadow: 0 6px 18px rgba(156,74,47,0.10); }
   .offer .tag { background: var(--accent); color: #fff; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 999px; white-space: nowrap; }
   .offer strong { color: var(--accent); }
@@ -401,6 +401,14 @@
   .offer-box small { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 0.2rem; }
   .strip li.hl { font-weight: 700; color: var(--accent); }
   @media (max-width: 560px) { .offer { font-size: 0.88rem; } .offer-box { flex-direction: column; align-items: flex-start; gap: 0.5rem; } }
+
+  .fact.fact-feature { grid-column: 1 / -1; display: flex; align-items: center; gap: 1.25rem; background: #fbefe9; border-color: #e9cdbf; }
+  .fact.fact-feature .fact-icon { background: var(--accent); color: #fff; margin-bottom: 0; flex: none; }
+  .fact.fact-feature h3 { color: var(--accent); margin-bottom: 0.2rem; }
+  .fact.fact-feature p { color: var(--ink); }
+  @media (max-width: 560px) { .fact.fact-feature { flex-direction: column; align-items: flex-start; gap: 0.9rem; } }
+
+  @media (max-width: 760px) { .catering-grid { grid-template-columns: 1fr; } }
 
   /* Scroll reveal (only when JS is running and motion is allowed) */
   .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 90ms); }
@@ -434,9 +442,8 @@
       <div>
         <p class="place">Moodbidri</p>
         <h1>Srishti Garden and<br>Multipurpose Hall</h1>
-        <p class="lede">The best wedding and function hall in Moodbidri. Two grand halls, food from our own kitchen, and a family team that looks after every detail - so you can simply enjoy your day.</p>
+        <p class="lede">The best wedding and function hall in Moodbidri. Two grand halls, our own catering, and a family team that looks after every detail.</p>
         <p class="events">Wedding &middot; Reception &middot; Engagement &middot; Corporate events</p>
-        <a class="offer" href="#catering"><span class="tag">Included</span><span><strong>Hall free</strong> whenever you choose our catering for 500+ guests</span></a>
         <div class="hero-ctas">
           <a class="btn" href="tel:+919945420100">Call +91 99454 20100</a>
           <a class="btn-wa" href="https://wa.me/919945420100?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20booking%20Srishti%20Garden.">Message on WhatsApp</a>
@@ -452,7 +459,7 @@
   <div class="strip">
     <ul class="wrap" aria-label="Highlights">
       <li>2 halls &middot; 1,000 guests each</li>
-      <li class="hl"><a href="/catering/">Free hall with our catering for 500+ guests</a></li>
+      <li><a href="/catering/">Veg and non-veg catering</a></li>
       <li>Ample parking</li>
       <li>Full power back-up</li>
       <li>500+ events hosted</li>
@@ -463,18 +470,19 @@
     <div class="wrap">
       <span class="eyebrow">The Venue</span>
       <h2>Room for everyone you love</h2>
-      <p class="intro">From an intimate engagement to a 1,000-guest wedding, Srishti Garden gives you the space, the food, and the peace of mind to be fully present on your big day. Everything is on one site in Alangar, Moodbidri - your guests arrive easily, park easily, and leave well fed.</p>
+      <p class="intro">From intimate engagements to 1,000-guest weddings - space, food, and parking, all in one place.</p>
       <picture>
         <source type="image/webp" srcset="static/image1-600.webp 600w, static/image1-1200.webp 1200w" sizes="(max-width: 1100px) 100vw, 1020px">
         <img class="photo" src="static/image1.jpg" width="1360" height="907" alt="Srishti Garden lit up at dusk for a wedding" loading="lazy" style="aspect-ratio:2/1; margin-bottom:1.75rem">
       </picture>
       <div class="facts-grid">
-        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span><h3>2 grand banquet halls</h3><p>Up to 1,000 guests in each. Hold the ceremony in one and dinner in the other, or keep veg and non-veg dining on separate floors.</p></div>
-        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></svg></span><h3>Our own catering</h3><p>Srishti Caterers cook veg and non-veg on site. Choose our catering for more than 500 guests and the hall is free. <a href="/catering/">See catering</a></p></div>
-        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7a2 2 0 1 1 2-2"/><path d="M12 7v1L3 15a1.5 1.5 0 0 0 1 3h16a1.5 1.5 0 0 0 1-3l-9-7"/></svg></span><h3>Bride and groom rooms</h3><p>Private dressing rooms at the venue, so you can get ready calmly and step straight onto the stage.</p></div>
-        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/></svg></span><h3>Parking for everyone</h3><p>A spacious on-site car park, so guests arrive relaxed instead of hunting for space on the road.</p></div>
-        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Full power back-up</h3><p>Back-up for the whole venue. The lights and music keep going, whatever the weather does.</p></div>
-        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><h3>500+ celebrations</h3><p>Five years of weddings, receptions, and family functions, rated 4.5 on WeddingBazaar. You're in experienced hands.</p></div>
+        <div class="fact fact-feature"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><div><h3>The hall is free with our catering</h3><p>Book Srishti Caterers for 500+ guests and the hall is free. <a href="/catering/">See catering</a></p></div></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span><h3>2 grand banquet halls</h3><p>Up to 1,000 guests each. Ceremony in one, dinner in the other.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></svg></span><h3>Our own catering</h3><p>Veg and non-veg, cooked on site by Srishti Caterers.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7a2 2 0 1 1 2-2"/><path d="M12 7v1L3 15a1.5 1.5 0 0 0 1 3h16a1.5 1.5 0 0 0 1-3l-9-7"/></svg></span><h3>Bride and groom rooms</h3><p>Private dressing rooms, steps from the stage.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/></svg></span><h3>Parking for everyone</h3><p>A spacious on-site car park for all your guests.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Full power back-up</h3><p>Full back-up, so the lights and music never stop.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><h3>500+ celebrations</h3><p>Five years of weddings and functions. Rated 4.5 on WeddingBazaar.</p></div>
       </div>
     </div>
   </section>
@@ -485,7 +493,7 @@
         <div class="enquiry-side">
           <span class="eyebrow">Check availability</span>
           <h2>Is your date still free?</h2>
-          <p class="intro">Wedding-season dates go quickly. Share a few details and we'll confirm availability for you personally.</p>
+          <p class="intro">Dates go quickly. Share a few details and we'll confirm on WhatsApp.</p>
           <ul class="enquiry-points">
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Two halls of up to 1,000 guests each</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Hall and catering in one booking</li>
@@ -531,7 +539,7 @@
     <div class="wrap">
       <span class="eyebrow">Reviews</span>
       <h2>What our guests say</h2>
-      <p class="summary">Over 500 weddings, receptions, and family celebrations - and the families keep coming back. Here's what they say about celebrating at Srishti Garden.</p>
+      <p class="summary">500+ celebrations and counting. Here's what families say.</p>
       <div class="ratings">
         <a class="rating" href="https://www.google.com/maps/search/?api=1&amp;query=Srishti+Garden+and+Multipurpose+Hall+Moodbidri" rel="noopener">
           <span class="score">4.2</span>
@@ -565,13 +573,12 @@
       <span class="eyebrow">Srishti Caterers</span>
       <h2>Food your guests will remember</h2>
       <p class="tagline">Elevate your events with our exquisite flavours.</p>
-      <div class="offer-box"><span class="big">Free hall</span><p>It's how we've always worked: choose Srishti Caterers for more than 500 guests and the hall is free.<small>Call or WhatsApp us to check your date.</small></p></div>
       <div class="vnv"><span class="veg">VEG</span><span class="nonveg">NON VEG</span></div>
-      <p class="intro">A great function is remembered for its food. Our own kitchen, Srishti Caterers, cooks veg and non-veg for every event at the hall - and brings the same food to your home or venue.</p>
+      <p class="intro">Veg and non-veg from our own kitchen - at our hall or at your venue.</p>
       <div class="catering-grid">
-        <div class="cater-card"><h3>In-house catering</h3><p>Veg and non-veg meals prepared on site for weddings, receptions, and every function at Srishti Garden.</p></div>
-        <div class="cater-card"><h3>Outdoor catering</h3><p>Hosting at home or another venue? Srishti Caterers can cater your event there too.</p></div>
-        <div class="cater-card"><h3>Menus for your event</h3><p>Tell us your event and guest count, and we'll talk you through menu options.</p></div>
+        <div class="cater-card"><h3>In-house catering</h3><p>Cooked on site for every function at Srishti Garden.</p></div>
+        <div class="cater-card"><h3>Outdoor catering</h3><p>We cater at your home or any venue.</p></div>
+        <div class="cater-card"><h3>Menus for your event</h3><p>Share your event and guest count - we'll suggest a menu.</p></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center">
         <a class="btn-call" href="/catering/">See catering details</a>
