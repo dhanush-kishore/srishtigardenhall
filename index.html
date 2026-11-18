@@ -125,39 +125,19 @@
     .nav-gallery { display: none; }
   }
 
-  /* Hero: full-width night photo */
-  .hero {
-    position: relative;
-    min-height: min(88vh, 720px);
-    display: flex;
-    align-items: flex-end;
-    color: #fff;
-    overflow: hidden;
-    background: #1d1612;
-  }
-  .hero-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 50%; }
-  .hero::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(25,17,12,0.05) 0%, rgba(25,17,12,0.35) 45%, rgba(25,17,12,0.85) 100%);
-  }
-  .hero-inner { position: relative; z-index: 1; width: 100%; padding-top: 7rem; padding-bottom: 3.5rem; }
-  .hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 700; color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.35); }
-  .hero .place {
-    color: #f1dcb3;
-    text-transform: uppercase;
-    letter-spacing: 0.28em;
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin-bottom: 0.9rem;
-  }
-  .hero p.lede { max-width: 34rem; margin: 0.9rem 0 0; font-size: 1.1rem; color: rgba(255,255,255,0.92); }
-  .hero .events { margin-top: 0.7rem; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+  /* Hero: cream, text left, framed building photo right */
+  .hero { background: var(--sand); color: var(--ink); border-bottom: 1px solid var(--line); }
+  .hero-inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3rem; align-items: center; padding-top: 3.5rem; padding-bottom: 4rem; }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; color: var(--ink); }
+  .hero .place { color: var(--accent); text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.9rem; }
+  .hero p.lede { max-width: 32rem; margin: 1rem 0 0; font-size: 1.1rem; color: var(--muted); }
+  .hero .events { margin-top: 0.7rem; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-ink); }
   .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.8rem; }
-  .hero-ctas .btn-ghost { box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.85); color: #fff; background: transparent; }
-  .hero-ctas .btn-ghost:hover, .hero-ctas .btn-ghost:focus { background: #fff; color: var(--ink); }
+  .hero-photo img { width: 100%; aspect-ratio: 712 / 379; object-fit: cover; border-radius: 14px; box-shadow: 0 18px 40px rgba(43,33,28,0.18); }
+  @media (max-width: 860px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 2rem; padding-top: 2.5rem; padding-bottom: 3rem; }
+  }
   @media (max-width: 640px) {
-    .hero { min-height: 78vh; }
-    .hero-inner { padding-bottom: 2.5rem; }
     .hero-ctas a { flex: 1 1 100%; text-align: center; }
   }
 
@@ -374,19 +354,21 @@
 
 <main id="top">
   <div class="hero">
-    <picture class="hero-bg">
-      <source type="image/webp" srcset="static/image1-1200.webp 1200w, static/image1-600.webp 600w" sizes="100vw">
-      <img src="static/image1.jpg" width="1360" height="907" alt="Srishti Garden lit up at dusk for a wedding" fetchpriority="high">
-    </picture>
     <div class="wrap hero-inner">
-      <p class="place">Moodbidri</p>
-      <h1>Srishti Garden and<br>Multipurpose Hall</h1>
-      <p class="lede">The best wedding and function hall in Moodbidri.</p>
-      <p class="events">Wedding &middot; Reception &middot; Engagement &middot; Corporate events</p>
-      <div class="hero-ctas">
-        <a class="btn" href="tel:+919945420100">Call +91 99454 20100</a>
-        <a class="btn btn-ghost" href="https://wa.me/919945420100?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20booking%20Srishti%20Garden.">Message on WhatsApp</a>
+      <div>
+        <p class="place">Moodbidri</p>
+        <h1>Srishti Garden and<br>Multipurpose Hall</h1>
+        <p class="lede">The best wedding and function hall in Moodbidri.</p>
+        <p class="events">Wedding &middot; Reception &middot; Engagement &middot; Corporate events</p>
+        <div class="hero-ctas">
+          <a class="btn" href="tel:+919945420100">Call +91 99454 20100</a>
+          <a class="btn-wa" href="https://wa.me/919945420100?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20booking%20Srishti%20Garden.">Message on WhatsApp</a>
+        </div>
       </div>
+      <picture class="hero-photo">
+        <source type="image/webp" srcset="static/building.webp">
+        <img src="static/building.jpg" width="712" height="379" alt="Srishti Garden Multipurpose Hall building in Moodbidri" fetchpriority="high">
+      </picture>
     </div>
   </div>
 
@@ -406,8 +388,8 @@
       <h2>A wedding hall for every family function</h2>
       <p class="intro">Weddings, receptions, engagements, corporate events, and family functions in Alangar, Moodbidri - with two large banquet halls, our own kitchen, and everything your guests need on one site.</p>
       <picture>
-        <source type="image/webp" srcset="static/building.webp">
-        <img class="photo" src="static/building.jpg" width="712" height="379" alt="Srishti Garden Multipurpose Hall building in daylight" loading="lazy" style="aspect-ratio:712/379; max-width:760px; margin-bottom:1.75rem">
+        <source type="image/webp" srcset="static/image1-600.webp 600w, static/image1-1200.webp 1200w" sizes="(max-width: 1100px) 100vw, 1020px">
+        <img class="photo" src="static/image1.jpg" width="1360" height="907" alt="Srishti Garden lit up at dusk for a wedding" loading="lazy" style="aspect-ratio:2/1; margin-bottom:1.75rem">
       </picture>
       <div class="facts-grid">
         <div class="fact"><h3>2 banquet halls</h3><p>Each hall holds up to 1,000 people.</p></div>
