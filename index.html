@@ -161,6 +161,13 @@
   .reviews .more { margin-top: 0.6rem; }
   .reviews .more a { text-underline-offset: 3px; text-decoration-color: var(--marigold); }
 
+  .ratings { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.4rem 0 0.4rem; }
+  .rating { display: flex; align-items: center; gap: 0.9rem; background: var(--ivory); border: 1px solid var(--line); border-radius: 14px; padding: 0.9rem 1.3rem; text-decoration: none; color: var(--ink); }
+  a.rating:hover { border-color: #dcc9ae; }
+  .rating .score { font-family: 'Fraunces', serif; font-size: 2rem; line-height: 1; color: var(--ink); }
+  .rating .rstars { color: var(--marigold); letter-spacing: 0.08em; font-size: 0.95rem; display: block; }
+  .rating .rsource { font-size: 0.85rem; color: var(--muted); display: block; }
+
   /* Catering */
   .catering-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
   .cater-card { background: #fff; border-radius: 0 12px 12px 0; padding: 1.4rem 1.5rem; border-left: 3px solid var(--marigold); box-shadow: 0 4px 14px rgba(22,41,31,0.06); }
@@ -330,6 +337,21 @@
   .enquiry-form { box-shadow: none; border: 1px solid var(--line); }
   footer { background: var(--ink); }
 
+  /* Venue feature cards */
+  .facts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+  .fact { background: #fff; border: 1px solid var(--line); border-top: 1px solid var(--line); border-radius: 14px; padding: 1.6rem 1.5rem 1.5rem; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+  .fact:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(43,33,28,0.08); border-color: #dcc9ae; }
+  .fact-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: #f6e7df; color: var(--accent); margin-bottom: 1rem; }
+  .fact-icon svg { width: 1.35rem; height: 1.35rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .fact h3 { font-size: 1.2rem; margin-bottom: 0.45rem; }
+  .fact p { font-size: 0.95rem; line-height: 1.6; }
+  @media (max-width: 900px) { .facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .facts-grid { grid-template-columns: 1fr; } .fact { padding: 1.3rem 1.25rem; } }
+
+  /* Scroll reveal (only when JS is running and motion is allowed) */
+  .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 90ms); }
+  .js .reveal.in { opacity: 1; transform: none; }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     * { transition: none !important; }
@@ -392,12 +414,12 @@
         <img class="photo" src="static/image1.jpg" width="1360" height="907" alt="Srishti Garden lit up at dusk for a wedding" loading="lazy" style="aspect-ratio:2/1; margin-bottom:1.75rem">
       </picture>
       <div class="facts-grid">
-        <div class="fact"><h3>2 grand banquet halls</h3><p>Up to 1,000 guests in each. Hold the ceremony in one and dinner in the other, or keep veg and non-veg dining on separate floors.</p></div>
-        <div class="fact"><h3>Our own kitchen</h3><p>Srishti Caterers cook veg and non-veg on site - one booking covers the hall and the food. <a href="/catering/">See catering</a></p></div>
-        <div class="fact"><h3>Bride and groom rooms</h3><p>Private dressing rooms at the venue, so you can get ready calmly and step straight onto the stage.</p></div>
-        <div class="fact"><h3>Parking for everyone</h3><p>A spacious on-site car park, so guests arrive relaxed instead of hunting for space on the road.</p></div>
-        <div class="fact"><h3>Full power back-up</h3><p>Back-up for the whole venue. The lights and music keep going, whatever the weather does.</p></div>
-        <div class="fact"><h3>500+ celebrations</h3><p>Five years of weddings, receptions, and family functions, rated 4.5 on WeddingBazaar. You're in experienced hands.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span><h3>2 grand banquet halls</h3><p>Up to 1,000 guests in each. Hold the ceremony in one and dinner in the other, or keep veg and non-veg dining on separate floors.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></svg></span><h3>Our own kitchen</h3><p>Srishti Caterers cook veg and non-veg on site - one booking covers the hall and the food. <a href="/catering/">See catering</a></p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7a2 2 0 1 1 2-2"/><path d="M12 7v1L3 15a1.5 1.5 0 0 0 1 3h16a1.5 1.5 0 0 0 1-3l-9-7"/></svg></span><h3>Bride and groom rooms</h3><p>Private dressing rooms at the venue, so you can get ready calmly and step straight onto the stage.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/></svg></span><h3>Parking for everyone</h3><p>A spacious on-site car park, so guests arrive relaxed instead of hunting for space on the road.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Full power back-up</h3><p>Back-up for the whole venue. The lights and music keep going, whatever the weather does.</p></div>
+        <div class="fact"><span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><h3>500+ celebrations</h3><p>Five years of weddings, receptions, and family functions, rated 4.5 on WeddingBazaar. You're in experienced hands.</p></div>
       </div>
     </div>
   </section>
@@ -407,6 +429,16 @@
       <span class="eyebrow">Reviews</span>
       <h2>What our guests say</h2>
       <p class="summary">Over 500 weddings, receptions, and family celebrations - and the families keep coming back. Here's what they say about celebrating at Srishti Garden.</p>
+      <div class="ratings">
+        <a class="rating" href="https://www.google.com/maps/search/?api=1&amp;query=Srishti+Garden+and+Multipurpose+Hall+Moodbidri" rel="noopener">
+          <span class="score">4.2</span>
+          <span><span class="rstars" aria-label="4.2 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="rsource">97 Google reviews</span></span>
+        </a>
+        <div class="rating">
+          <span class="score">4.5</span>
+          <span><span class="rstars" aria-label="4.5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="rsource">Rated on WeddingBazaar</span></span>
+        </div>
+      </div>
       <div class="reviews-grid">
         <figure class="review">
           <blockquote>Well managed hall with lots of space</blockquote>
@@ -595,6 +627,28 @@
       if (guests) lines.push('Guests: about ' + guests);
       window.open('https://wa.me/919945420100?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
     });
+  })();
+</script>
+<script>
+  // Scroll reveal: fade elements up as they enter the viewport
+  (function () {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('js');
+    var groups = ['section .eyebrow', 'section h2', 'section .intro', 'section .summary', '.fact', '.review', '.cater-card', '.gallery-grid > button', '.enquiry-form', '.location-grid > *', '.event-list li', '.faq details', '.hero-photo', '.strip li'];
+    var els = [];
+    groups.forEach(function (sel) {
+      var list = document.querySelectorAll(sel);
+      Array.prototype.forEach.call(list, function (el, n) {
+        if (el.classList.contains('reveal')) return;
+        el.classList.add('reveal');
+        if (/fact|review|cater-card|gallery|event-list|faq|strip/.test(sel)) el.style.setProperty('--i', n % 6);
+        els.push(el);
+      });
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
   })();
 </script>
 </body>
